@@ -38,7 +38,9 @@ period = 0
 if (a<len(dictP.get(4))):
     b = random.choice(dictP.get(4))
     period = 4
+    print(b)
 else:
     b = random.choice(dictP.get(5))
     period = 5
+    print(b)
 print(f"Period: {period}, Name: {b}")
