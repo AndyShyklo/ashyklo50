@@ -17,6 +17,9 @@ DISCO:
 -runs locally
 -you can run the virtual environment from even outside the directory/virtual env
 -py works instead of python too
+-you need to reference a global variable in a method if you definied it outside of that method
+-you can format html in a simpler way by putting it in the return statement
+-the app route shows where relative to the website this runs, so / is the root and /hi is the url/hi
 
 QCC:
 0. What is __name__ referring to? Is it something built-in already?
@@ -36,12 +39,19 @@ So first we tried to understand the code just by looking through each line and n
 
 
 from flask import Flask
+i = 0
 
 app = Flask(__name__)                    # Q0: Where have you seen similar syntax in other langs? A: One thing we noticed is that the @app.route is similar to the @override in Java.
 
 @app.route("/")                          # Q1: What points of reference do you have for meaning of '/'?  A: From what we know "/" refers to the root directory so we think it is putting the app in the root directory or searching for it there; or it is going to the root direectory of the app and running it from there.
 def hello_world():
-    print(__name__)                      # Q2: Where will this print to?Q3: What will it print? A: It creates the webpage, perhaps it is the https response thats goes into the localhost
-    return "No hablo queso!"             # Q4: Will this appear anywhere? How u know? A: Yes, this appears on the webpage of the my local link that was given when I ran the script. It prints "No hablo queso!"
+    global i
+    i += 1
+    print(i)
+    return(f"<h1>abc: {i}<h1>hello <a href=hi target=_blank>This is a link</a>")
+
+@app.route("/hi")                          # Q1: What points of reference do you have for meaning of '/'?  A: From what we know "/" refers to the root directory so we think it is putting the app in the root directory or searching for it there; or it is going to the root direectory of the app and running it from there.
+def sub_page():
+    return(f"<h1>hello")     # Q4: Will this appear anywhere? How u know? A: Yes, this appears on the webpage of the my local link that was given when I ran the script. It prints "No hablo queso!"
 
 app.run()                                # Q5: Where have you seen similar constructs in other languages? A: I think Java uses a similar construct. Different javascript programs like Node.js and React.js have similar aspects as well.
