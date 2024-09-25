@@ -11,3 +11,4 @@ def hello_world():
 
 app.run()
 
+#In this case, the print statement for __name__ is gone, so now, whenever the page is loaded, __main__ doesn't print into the terminal.
