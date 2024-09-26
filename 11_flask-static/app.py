@@ -24,13 +24,11 @@ def h():
     print(__name__)
     return str(random.random())
 
-'''
-@app.route("/static/fixie.html")
+@app.route("/static/fixie")
 def hi():
     print("the __name__ of this module is... ")
     print(__name__)
     return "<h1>Team Name: Python Pigs</h1><br><h2>Roster: Ankita Saha, Andy Shyklo, Abidur Rahman</h2>"
-'''
     
 if __name__ == "__main__":  # true if this file NOT imported
     app.debug = True        # enable auto-reload upon code change
