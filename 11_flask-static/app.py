@@ -1,6 +1,10 @@
-# Clyde 'Thluffy' Sinclair
-# SoftDev
-# Sep 2024
+'''Ankita Saha, Andy Shyklo, Abidur Rahman
+  Python Pigs
+  SoftDev
+  Running Flask scripts vs. html scripts
+  2024-9-25
+  time spent: 0.67 hours
+'''
 
 # DEMO
 # basics of /static folder
