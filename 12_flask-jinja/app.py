@@ -1,5 +1,5 @@
 """
-Linda Zheng
+Linda Zheng, Andy Shyklo, Eva Black
 FlaskmakeCent
 SoftDev
 K12 - templates more
