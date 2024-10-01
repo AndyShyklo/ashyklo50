@@ -6,7 +6,11 @@
  -->
 
 <html>
-
+  <style>
+  table, th, td {
+      border:1px solid black;
+  }
+  </style>
   <head>
     <title> {{ foo }} </title>
   </head>
@@ -17,17 +21,19 @@
     <h3>{{roster}}</h3>
     <br>
     <table>
-    {% for d in dictValues.keys() %}
     <tr>
-        <th>{{d}}</th>
+        <th>Jobs</th>
+        <th>Percentage</th>
     </tr>
-    (% endfor %)
-    {% for d in dictValues.values() %}
+    {% for d in dictValues %}
     <tr>
         <td>{{d}}</td>
+        <td>{{dictValues.get(d)}}</td>
     </tr>
-    (% endfor %)
+    {% endfor %}
     </table>
+    <br>
+    <h3>Your random job is: {{random}}</h3>
   </body>
 
 </html>
