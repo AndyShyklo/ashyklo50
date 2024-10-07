@@ -2,9 +2,9 @@
 Andy Shyklo, Ankita Saha, Abidur Rahman
 Python Pigs
 SoftDev
-K12 - templates more
+K12 - templates more w/ occupations.csv
 2024-09-27
-time spent: .5
+time spent: 1 hr
 """
 
 from flask import Flask, render_template
@@ -26,15 +26,20 @@ def splitHeaders(dataSet): #converts data to dictionary
     dictValues = {}
     for data in dataSet:
         for string in data:
-            for count, letter in enumerate(string[:len(string)-1]):
-                if letter == ',' and string[count+1].isnumeric():
-                    dictValues[string[:count]] = float(string[count+1:])
+            three = string.rsplit(',', 2)
+            if len(three) == 3 and three[1].replace('.', '', 1).isnumeric():  
+                job = three[0]
+                percentage = float(three[1])
+                link = three[2]
+                dictValues[job] = [percentage, link] 
+                    
     return dictValues
 
 def randomizeJob(dict): #randomizes job, weighted
     randVal = random.uniform(0,99.8)
     for data in dict:
-        randVal -= dict[data]
+        print(data)
+        randVal -= (dict[data])[0]
         if(randVal <= 0):
             return data
 
@@ -45,6 +50,7 @@ def hello_world():
     headers = jobData[0][0].split(',')
     numJobData = jobData[1:len(jobData)-1] #not counting the header of the values + the total amount
     dictValues = splitHeaders(numJobData)
+    #print(dictValues)
     random = randomizeJob(dictValues)
     
     return render_template('temp.html', foo="Python Pigs", heading="app.py for app reoute of wdywtbwygp", roster="Python Pigs: Andy Shyklo, Ankita Saha, Abidur Rahman", dictValues=dictValues, random=random)
@@ -52,4 +58,3 @@ def hello_world():
 if __name__ == "__main__":
     app.debug = True
     app.run()
-

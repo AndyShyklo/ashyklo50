@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <!-- 
-  Clyde 'Thluffy' Sinclair
-  SoftDev
-  Oct 2022
+  Andy Shyklo, Ankita Saha, Abidur Rahman
+Python Pigs
+SoftDev
+K12 - templates more w/ occupations.csv
+2024-09-27
+time spent: 1 hr
  -->
 
 <html>
@@ -21,16 +24,18 @@
     <h3>{{roster}}</h3>
     <br>
     <table>
-    <tr>
-        <th>Jobs</th>
-        <th>Percentage</th>
-    </tr>
-    {% for d in dictValues %}
-    <tr>
-        <td>{{d}}</td>
-        <td>{{dictValues.get(d)}}</td>
-    </tr>
-    {% endfor %}
+      <tr>
+          <th>Jobs</th>
+          <th>Percentage</th>
+          <th>Link</th>
+      </tr>
+      {% for d in dictValues %}
+      <tr>
+          <td>{{d}}</td>
+          <td>{{dictValues.get(d)[0]}}</td>
+          <td><a href="{{dictValues.get(d)[1]}}">Link to Job</a></td>
+      </tr>
+      {% endfor %}
     </table>
     <br>
     <h3>Your random job is: {{random}}</h3>
