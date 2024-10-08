@@ -1,6 +1,11 @@
-# Clyde 'Thluffy' Sinclair
-# SoftDev
-# October 2024
+"""
+Andy Shyklo, Ankita Saha, Abidur Rahman
+Python Pigs
+SoftDev
+K14 - intake and forms
+2024-10-07
+time spent: 1 hr
+"""
 
 # import conventions:
 # list most general first (standard python library)
@@ -12,7 +17,7 @@ from flask import render_template   #facilitate jinja templating
 from flask import request           #facilitate form submission
 
 import testmod0
-'''We think that at the import of import testmod0.py, it will not print what is under the if statement
+'''Why is it not testmod0.py instead of testmod0? We think that at the import of import testmod0.py, it will not print what is under the if statement
 or the goo method in textmod0.py, but just print the plain print statements that aren't under any method/statement.'''
 
 #the conventional way:
@@ -43,37 +48,40 @@ PROTIP: Insert your own in-line comments
 
 @app.route("/") #, methods=['GET', 'POST']) 
 def disp_loginpage():
-    #print("\n\n\n")
-    #print("***DIAG: this Flask obj ***")
-    #print(app)
-    #print("***DIAG: request obj ***")
-    #print(request)
-    #print("***DIAG: request.args ***")
-    #print(request.args)
-    #print("***DIAG: request.args['username']  ***")
-    #print(request.args['username'])
-    #print("***DIAG: request.headers ***")
-    #print(request.headers)
+    print("\n\n\n")
+    print("***DIAG: this Flask obj ***")
+    print(app)
+    print("***DIAG: request obj ***")
+    print(request)
+    print("***DIAG: request.args ***")
+    print(request.args)
+    print("***DIAG: request.args['username']  ***")
+    print(request.args['username'])
+    print("***DIAG: request.headers ***")
+    print(request.headers)
     return render_template( 'login.html' )
 '''Here, We are unsure about what the methods and ***DIAG:*** means, but we think it might be some parameter that is
 inputted when you access, either given from another method or your access info. We think the DIAG means is trying
-to request information about login and such, step by step, in order to gain secure and accurate info.'''
+to request information about login and such, step by step, in order to gain secure and accurate info.
+Also, there will a request to load login.html with render_template, but it looks to be called somewhat in a weird way.'''
 
 @app.route("/auth") # , methods=['GET', 'POST'])
 def authenticate():
-    #print("\n\n\n")
-    #print("***DIAG: this Flask obj ***")
-    #print(app)
-    #print("***DIAG: request obj ***")
-    #print(request)
-    #print("***DIAG: request.args ***")
-    #print(request.args)
-    #print("***DIAG: request.args['username']  ***")
-    #print(request.args['username'])
-    #print("***DIAG: request.headers ***")
-    #print(request.headers)
+    print("\n\n\n")
+    print("***DIAG: this Flask obj ***")
+    print(app)
+    print("***DIAG: request obj ***")
+    print(request)
+    print("***DIAG: request.args ***")
+    print(request.args)
+    print("***DIAG: request.args['username']  ***")
+    print(request.args['username'])
+    print("***DIAG: request.headers ***")
+    print(request.headers)
     return "Waaaa hooo HAAAH"  #response to a form submission
-
+'''
+When the /auth is requested, via the submission form, the page will just show "Waaaa hooo HAAAH", but we don't know what many of the DIAG and GET or POST things do in the code.
+'''
 
     
 if __name__ == "__main__": #false if this file imported as module

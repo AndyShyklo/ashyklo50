@@ -2,8 +2,8 @@
 Andy Shyklo, Ankita Saha, Abidur Rahman
 Python Pigs
 SoftDev
-K12 - templates more w/ occupations.csv
-2024-09-27
+K13 - templates more w/ occupations.csv
+2024-10-02
 time spent: 1 hr
 """
 

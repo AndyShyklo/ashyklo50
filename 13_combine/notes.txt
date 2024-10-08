@@ -1,0 +1,14 @@
+Tables are made with:
+<table>
+      <tr>
+HEAD VAL: <th>head1</th>
+          <th>head2</th>
+          <th>head3</th>
+      </tr>
+      {for i in range(3)}
+COL:  <tr> 
+          <td>value1</td>
+          <td>value2</td>
+          <td>value3</td>
+      </tr>
+</table>

@@ -8,7 +8,7 @@ DISCO:
 
 
 Q/C/C:
-* 
+* I have an error that I do not have flask installed when I do have it installed. I also can't reinstall it due to my anti-virus not allowing me.
 * 
 * 
 -----------------------------------------------------------------------
