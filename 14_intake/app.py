@@ -16,8 +16,8 @@ from flask import Flask             #facilitate flask webserving
 from flask import render_template   #facilitate jinja templating
 from flask import request           #facilitate form submission
 
-import testmod0
-'''Why is it not testmod0.py instead of testmod0? We think that at the import of import testmod0.py, it will not print what is under the if statement
+import textmod0
+'''Why is it not textmod0.py instead of textmod0? We think that at the import of import testmod0.py, it will not print what is under the if statement
 or the goo method in textmod0.py, but just print the plain print statements that aren't under any method/statement.'''
 
 #the conventional way:
@@ -46,7 +46,8 @@ PROTIP: Insert your own in-line comments
    understand what is going on.
 '''
 
-@app.route("/") #, methods=['GET', 'POST']) 
+@app.route("/", methods=['GET', 'POST'])
+#We don't know what these methods do, but maybe they just take from the base request of the user.
 def disp_loginpage():
     print("\n\n\n")
     print("***DIAG: this Flask obj ***")
@@ -55,10 +56,12 @@ def disp_loginpage():
     print(request)
     print("***DIAG: request.args ***")
     print(request.args)
-    print("***DIAG: request.args['username']  ***")
-    print(request.args['username'])
-    print("***DIAG: request.headers ***")
-    print(request.headers)
+    #This requests the arguments of the methods when accessing it, like the GET and POST methods, when given.
+    #print("***DIAG: request.args['username']  ***")
+    # Where does it get the username from? What is it requesting from? We think it could be from the original methods at the top.
+    #print(request.args['username'])
+    #print("***DIAG: request.headers ***")
+    #print(request.headers)
     return render_template( 'login.html' )
 '''Here, We are unsure about what the methods and ***DIAG:*** means, but we think it might be some parameter that is
 inputted when you access, either given from another method or your access info. We think the DIAG means is trying
