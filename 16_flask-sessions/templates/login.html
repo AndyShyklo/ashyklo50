@@ -12,18 +12,16 @@
 
 
     <h3>
-      Enter your username below to proceed!
+      Enter your username and password below to proceed!
     </h3>
-    <br>
-    <h4>Use GET:</h4>
-    <form action="/auth" method="GET">
-      <input type="text" name="username">
-      <input type="submit" name="sub1">
-    </form>
-    <br>
-     <h4>Use POST:</h4>
     <form action="/auth" method="POST">
+      <h5>Username: </h5>
       <input type="text" name="username">
+      <br>
+      <h5>Password: </h5>
+      <input type="text" name="password">
+      <br>
+      <br>
       <input type="submit" name="sub1">
     </form>
   </body>

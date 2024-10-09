@@ -64,14 +64,14 @@ def authenticate():
     print(request)
     print("***DIAG: request.args ***")
     print(request.args)
-    print("***DIAG: request.args['username']  ***")
-    #print(request.args['username'])
-    #print("***DIAG: request.headers ***")
-    #print(request.headers)
+    #print("***DIAG: request.args['username']  ***")
+    #print(request.form.get['username'])
+    #print("***DIAG: request.args['password']  ***")
+    #print(request.form.get['password'])
+    print("***DIAG: request.headers ***")
+    print(request.headers)
     if request.method == 'POST':
-        return render_template('response.html', username = request.form.get('username'))
-    elif request.method == 'GET':
-        return render_template('response.html', username = request.args['username'])
+        return render_template('response.html', username = request.form.get('username'), password=request.form.get('password'))
     else:
         return "<h1>Error!</h1>"
 
