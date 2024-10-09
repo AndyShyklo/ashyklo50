@@ -1,16 +1,25 @@
-< your heading here >
+"""
+Andy Shyklo, Ankita Saha, Abidur Rahman
+Python Pigs
+SoftDev
+K14 - intake and forms
+2024-10-07
+time spent: 1 hr
+"""
 
 DISCO:
-* 
-* 
-* 
+* GET and POST are not required, but when specified, they are. They basically show the values of the person that is visiting, and what arguments come with that.
+* A form will be able to add arguments and call actions when submitted.
+* The username, when added, is now added to either the GET or POST variables, and displays itself in the url and is accessible via the parameters.
+* The inputs for the form are shown as values in the url when accessing /auth, and you get a BadRequestKeyError if you do not have these parameters and just call /auth.
 -----------------------------------------------------------------------
 
 
 Q/C/C:
-* I have an error that I do not have flask installed when I do have it installed. I also can't reinstall it due to my anti-virus not allowing me.
-* 
-* 
+* Could anyone just add someone else's username into the top bar and access their account, displaying that person's info?
+* What is the difference between GET and POST, and how is that shown here?
+* How do you add more text areas and parameters to be viewed, and used. 
+* How would I recognize a user and actually make the first method work as intended with breaking, as if it could access the username parameter right away.
 -----------------------------------------------------------------------
 
 
