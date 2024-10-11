@@ -2,10 +2,19 @@
 Andy Shyklo
 
 SoftDev
-K15 - flask forms
+K16 - flask sessions
 2024-10-08
 time spent: 1 hr
 """
+
+Our plan:
+Use the POST method to take in information
+Take in 2 values: username and text, and send them to response.html
+Use flask sessions to store the user's values and keep them logged in:
+Generate a secret key, and use session values for username and password
+to define, and then check, for any pre-used values. We will also make a
+logout form on the /auth page, and redirect to there when the user logs in.
+
 
 DISCO:
 * 

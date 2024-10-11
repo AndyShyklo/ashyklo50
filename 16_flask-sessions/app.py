@@ -15,6 +15,8 @@ time spent: 1 hr
 from flask import Flask             #facilitate flask webserving
 from flask import render_template   #facilitate jinja templating
 from flask import request           #facilitate form submission
+from flask import session
+from flask import redirect
 
 import textmod0
 
@@ -22,6 +24,7 @@ import textmod0
 #from flask import Flask, render_template, request
 
 app = Flask(__name__)    #create Flask object
+app.secret_key = b'_5#j812jwwjkKLWio)2u'
 
 
 '''
@@ -46,6 +49,7 @@ PROTIP: Insert your own in-line comments
 
 @app.route("/", methods=['GET', 'POST'])
 def disp_loginpage():
+    print("Logging in")
     print("\n\n\n")
     print("***DIAG: this Flask obj ***")
     print(app)
@@ -53,10 +57,13 @@ def disp_loginpage():
     print(request)
     print("***DIAG: request.args ***")
     print(request.args)
+    if 'username' in session:
+        return redirect("/auth")
     return render_template( 'login.html' )
 
 @app.route("/auth", methods=['GET', 'POST'])
 def authenticate():
+    print("Authenticating")
     print("\n\n\n")
     print("***DIAG: this Flask obj ***")
     print(app)
@@ -64,6 +71,8 @@ def authenticate():
     print(request)
     print("***DIAG: request.args ***")
     print(request.args)
+    if 'username' in session:
+        return(render_template('response.html', username = session["username"], password = session["password"]))
     #print("***DIAG: request.args['username']  ***")
     #print(request.form.get['username'])
     #print("***DIAG: request.args['password']  ***")
@@ -71,10 +80,24 @@ def authenticate():
     print("***DIAG: request.headers ***")
     print(request.headers)
     if request.method == 'POST':
-        return render_template('response.html', username = request.form.get('username'), password=request.form.get('password'))
+        session['username']=request.form.get('username')
+        session['password']=request.form.get('password')
+        return(render_template('response.html', username = session["username"], password = session["password"]))
     else:
         return "<h1>Error!</h1>"
-
+    
+@app.route("/logout", methods=['GET', 'POST'])
+def disp_logoutpage():
+    print("Logging out")
+    print("\n\n\n")
+    print("***DIAG: this Flask obj ***")
+    print(app)
+    print("***DIAG: request obj ***")
+    print(request)
+    print("***DIAG: request.args ***")
+    print(request.args)
+    session.clear()
+    return render_template( 'logout.html' )
     
 if __name__ == "__main__": #false if this file imported as module
     #enable debugging, auto-restarting of server when this file is modified
