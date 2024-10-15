@@ -96,8 +96,9 @@ def disp_logoutpage():
     print(request)
     print("***DIAG: request.args ***")
     print(request.args)
+    se = session["username"]
     session.clear()
-    return render_template( 'logout.html' )
+    return render_template( 'logout.html', usr = se)
     
 if __name__ == "__main__": #false if this file imported as module
     #enable debugging, auto-restarting of server when this file is modified
