@@ -1,7 +1,7 @@
 '''Ankita Saha, Andy Shyklo
   Python Pigs
   SoftDev
-  Reading CSV Files and Practicing W/ Random
+  K6 - Reading CSV Files and Practicing W/ Random
   2024-9-19
   time spent: 0.9 hours
   '''

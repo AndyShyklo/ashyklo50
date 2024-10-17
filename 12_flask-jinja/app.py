@@ -4,7 +4,7 @@ FlaskmakeCent
 SoftDev
 K12 - templates more
 2024-09-27
-time spent: .5
+time spent: 0.5 hours
 
 DISCO:
 *The render_template method was able to read the model_tmplt.html without a direct path from app.py.

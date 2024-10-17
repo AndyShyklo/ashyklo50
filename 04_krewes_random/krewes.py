@@ -1,9 +1,11 @@
-'''<Andy> <Shyklo>
-<Python Pigs>
-SoftDev
-K<04> -- <Python dictionaries and random selection>
-<2024>-<09>-<16>
-Time Spent: <>'''
+'''
+  Ankita Saha, Andy Shyklo, Abidur Rahman
+  Python Pigs
+  SoftDev
+  K4 - Krewes w/ Random
+  2024-9-17
+  time spent: 0.5 hours
+  '''
 import random
 
 krewes = {

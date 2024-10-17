@@ -1,6 +1,11 @@
-# Clyde 'Thluffy' Sinclair
-# SoftDev
-# September 2024
+'''
+  Ankita Saha, Andy Shyklo, Abidur Rahman
+  Python Pigs
+  SoftDev
+  K09 - Occupations and CSV
+  2024-9-23
+  time spent: 1.3 hours
+'''
 
 from flask import Flask
 import random

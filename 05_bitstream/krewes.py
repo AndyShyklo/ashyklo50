@@ -1,3 +1,12 @@
+'''
+  Ankita Saha, Andy Shyklo, Abidur Rahman
+  Python Pigs
+  SoftDev
+  K5 - Bitstream
+  2024-9-18
+  time spent: 0.7 hours
+  '''
+
 import random
 
 f = open("krewes.txt", "r")

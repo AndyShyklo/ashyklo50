@@ -1,10 +1,10 @@
 """
-Andy Shyklo
-
+Andy Shyklo, Ankita Saha, Abidur Rahman
+Python Pigs
 SoftDev
-K15 - flask forms
-2024-10-08
-time spent: 1 hr
+K16 - flask sessions
+2024-10-9
+time spent: 1.5 hr
 """
 
 # import conventions:
