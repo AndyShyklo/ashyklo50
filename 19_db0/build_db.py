@@ -58,10 +58,10 @@ with open("students.csv", mode = 'r') as file:
 
 db.commit() #save changes
 
-res = c.execute("SELECT code, mark, id FROM courses")
-print(res.fetchall())
+fetc = c.execute("SELECT code, mark, id FROM courses")
+print(fetc.fetchall())
 
-rest = c.execute("SELECT name, age, id FROM students")
-print(rest.fetchall())
+fetcs = c.execute("SELECT name, age, id FROM students")
+print(fetcs.fetchall())
 
 db.close()  #close database
