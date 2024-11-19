@@ -4,12 +4,31 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<script src="https://cdn.tailwindcss.com"></script>
-		<style type="text/tailwindcss">
-@layer utilities {
-	.content-auto {
-		content-visibility: auto;
-	}
-}
-		</style>	
-	</head>
-	<body>
+
+    <script>
+        tailwind.config = {
+          theme: {
+              colors: { <!-- Create custom colors-->
+                'andycolor': '#1fb6ff',
+                'andycolor2': '#128748',
+              },
+              fontFamily: {
+                sans: ['Graphik', 'sans-serif'],
+                serif: ['Merriweather', 'serif'],
+              },
+            },
+        }
+    </script>
+    </head>
+	<body class="text-center font-serif">
+	<h1 class="text-m text-center hover:text-xl">
+      <p style="border-weight: 2px">
+        I’m tall when I’m young, and I’m short when I’m old.
+        <br></p> 
+      <p style="margin-left:25%; width:50%; border-weight:2px; border-radius:3px" class="bg-andycolor">What am I?</p>
+    </h1>
+    <h1 class="text-xl text-ghost font-bold underline">
+        <p class="bg-andycolor2 text-ghost text-center hover:text-left">Ans</p>
+    </h1>
+	</body>
+</html>
