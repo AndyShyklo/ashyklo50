@@ -9,26 +9,48 @@
         tailwind.config = {
           theme: {
               colors: { <!-- Create custom colors-->
-                'andycolor': '#1fb6ff',
-                'andycolor2': '#128748',
+                'thecolor': '#1fb6ff',
+                'thecolor2': '#128748',
+                'theyellow': '#ffc82c',
+                'thered': '	#ff0000',
               },
               fontFamily: {
                 sans: ['Graphik', 'sans-serif'],
                 serif: ['Merriweather', 'serif'],
               },
+              variants: {
+                  extend: {
+                      display: ["group-hover"],
+                  },
+              },
             },
         }
     </script>
     </head>
-	<body class="text-center font-serif">
-	<h1 class="text-m text-center hover:text-xl">
-      <p style="border-weight: 2px">
-        I’m tall when I’m young, and I’m short when I’m old.
-        <br></p> 
-      <p style="margin-left:25%; width:50%; border-weight:2px; border-radius:3px" class="bg-andycolor">What am I?</p>
+	<body class="flex flex-col items-center justify-center min-h-screen text-center font-serif">
+	  <h1 class="text-xl text-center hover:text-2xl">
+      I’m tall when I’m young, and I’m short when I’m old.
+      <br>
     </h1>
-    <h1 class="text-xl text-ghost font-bold underline">
-        <p class="bg-andycolor2 text-ghost text-center hover:text-left">Ans</p>
-    </h1>
+    <p style="width:50%; border-width:2px; border-radius:10px" class="bg-thecolor text-2xl">What am I?</p>
+    <br>
+    <div class="flex items-center justify-center group relative w-64 h-64 rounded-lg shadow-lg cursor-pointer flex text-white">
+      <span class="text-lg font-bold group-hover:opacity-0 transition-opacity duration-300">Hover to reveal answer</span>
+      <div class="absolute inset-0 rounded-lg flex items-center justify-center text-white text-2xl font-bold opacity-0 group-hover:opacity-100 duration-300">
+          A candle!
+      </div>
+    </div>
+    <button class="bg-thecolor active:bg-theyellow px-4 py-2 text-white sm:px-8 sm:py-3 hover:bg-thered">What color will I be next?</button>
+    <button class="bg-theyellow active:bg-thered px-4 py-2 text-white sm:px-8 sm:py-3 hover:bg-thecolor">What color will I be next?</button>
+    <button class="bg-thered active:bg-thecolor px-4 py-2 text-white sm:px-8 sm:py-3 hover:bg-theyellow">What color will I be next?</button>
+    <br><br>
+    <button class="bg-theyellow px-4 py-2 text-white sm:px-8 sm:py-3 hover:bg-thered cursor-progress rounded-full">It'll load some day...</button>
+    <button type="button" class="bg-andyred text-white font-bold px-4 py-2 rounded-4 border-1 border-black inline-flex items-center" disabled>
+      <svg class="animate-spin h-5 w-5 mr-3 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+          <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+          <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
+      </svg>
+      Loading...
+  </button>
 	</body>
 </html>
