@@ -1,18 +1,21 @@
-# how-to :: DO THE THING
+# how-to :: make database-like tables in a google document
 ---
 ## Overview
-Why we care, what this will allow us to do, etc...
+Allows for a really easy and understandable display of your SQL Databases, including all connections. Done using Google Drawings through Google Docs
 
-### Estimated Time Cost: x.x hrs (round to nearest 0.1)
+### Estimated Time Cost: 0.5 hrs
 
 ### Prerequisites:
 
-- Something you should know beforehand...
-- Something you will need installed beforehand...
+- Works with Google Drawings, which is integrated into Google Docs but not into Google Slides.
+- Make sure to have a google account and an empty document open.
 
 ### Procedure:
-1. Step blah blah blah, and/or...
-1. Step, with `inline code`, and/or...
+1. Open a new document in Google Docs
+2. At the top of the file, below the name, click Insert --> Drawing --> New
+
+This will open a new drawing.
+
 1. Step, with
     ```
     generic code block or terminal command
@@ -44,15 +47,7 @@ Why we care, what this will allow us to do, etc...
  
 ---
 
-Accurate as of (last update): 2024-mm-dd
+Accurate as of (last update): 2024-12-09
 
 #### Contributors:  
-Clyde "Thluffy" Sinclair  
-Thundercleese, pd2  
-Buttercup, pd4  
-Blossom, pd5  
-Bubbles, pd4  
-Fake Grimlock, pd5  
-Rory Breaker, pd0  
-
-_Note: the two spaces after each name are important! ( <--burn after reading)  _
+Andy Shyklo, pd4  
