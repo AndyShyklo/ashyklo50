@@ -9,7 +9,7 @@ from flask import render_template, Flask, session, request, redirect
 f = open("key_nasa.txt")
 key = f.read()
 
-app = Flask(__name__)    #create Flask object
+app = Flask(__name__)
 app.secret_key = b'_5#j812jwwjkKLWio)2u'
 
 @app.route("/")
