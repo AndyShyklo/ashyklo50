@@ -105,6 +105,21 @@ var stripe = function()
 // FAC
 // GCD
 
+var fact = function(n) {
+    if (n == 1) {
+        return(1);
+    }  
+    return n * fact(n-1);
+} 
+
+
+var fib = function(n) {
+    if (n <= 1) {
+        return(n);
+    }  
+    return fib(n-1) + fib(n-2);
+} 
+
 
 // In addition to the style shown above,
 //  you are encouraged to test drive the "arrow function syntax" as shown below.
