@@ -1,0 +1,8 @@
+log.txt:
+
+We had to tell copilot to put all the python text into just __init__.py, but it originally didn't work.
+Copilot detects vulnerabilities, like unvalidated URL redirection and hardcoded credentials.
+It also used a lot of imports that are unknown to us, like Bcrypt.
+Copilot prefers to write code very neatly but also shortly, and doesn't like to blabber much unlike ChatGPT.
+Code broke within the shell.
+
