@@ -1,1 +1,12 @@
+read tutorial
+perform tutorialized steps for pm w group watching
+upon success repeat steps w learnination for other group mates
 
+designated scribe(s):
+-das
+
+domain provision:
+dwn: no
+dmc: no
+dkl: no
+das: no
